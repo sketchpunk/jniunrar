@@ -1,4 +1,9 @@
 #include "rar.hpp"
+#include "misc/wctomb.hpp"
+#include "misc/mblen.hpp"
+#include "misc/wcstombs.hpp"
+#include "misc/mbtowc.hpp"
+#include "misc/mbstowcs.hpp"
 #define MBFUNCTIONS
 
 #if defined(_UNIX) && defined(MBFUNCTIONS)
