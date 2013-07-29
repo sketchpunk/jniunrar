@@ -130,7 +130,17 @@
   #include <sys/sysctl.h>
 #endif
 #ifndef SFX_MODULE
-  #include <sys/statvfs.h>
+  
+  //found fix for statvfs.h here. For android devices that header file should not be loaded.
+  //https://svn.boost.org/trac/boost/attachment/ticket/8285/filesystem-android.patch
+  #ifndef __ANDROID__ 
+    #include <sys/statvfs.h> 
+  #else 
+    #include <sys/vfs.h> 
+    #define statvfs statfs 
+    #define fstatvfs fstatfs 
+  #endif
+
 #endif
 #if defined(__FreeBSD__) || defined (__NetBSD__) || defined (__OpenBSD__) || defined(__APPLE__)
 #endif
