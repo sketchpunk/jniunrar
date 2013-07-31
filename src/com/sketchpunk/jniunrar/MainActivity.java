@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         System.out.println(unrar.getVersion());
-        String[] ary = unrar.getListing("/sdcard/test.rar");
+        String[] ary = unrar.getEntries("/sdcard/test.rar",".JPG,.PNG,.jpeg,.gif");
         if(ary != null){
         	System.out.println(ary.length);
         	for(int i=0; i < ary.length; i++){

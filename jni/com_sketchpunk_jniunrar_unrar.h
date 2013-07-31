@@ -17,19 +17,19 @@ JNIEXPORT jstring JNICALL Java_com_sketchpunk_jniunrar_unrar_getVersion
 
 /*
  * Class:     com_sketchpunk_jniunrar_unrar
- * Method:    getListing
+ * Method:    getEntries
  * Signature: (Ljava/lang/String;)[Ljava/lang/String;
  */
-JNIEXPORT jobjectArray JNICALL Java_com_sketchpunk_jniunrar_unrar_getListing
-  (JNIEnv *env, jclass cls,jstring jFilePath);
+JNIEXPORT jobjectArray JNICALL Java_com_sketchpunk_jniunrar_unrar_getEntries
+  (JNIEnv * env, jclass cls, jstring jArcPath,jstring jExtList);
 
 /*
  * Class:     com_sketchpunk_jniunrar_unrar
- * Method:    getBytes
+ * Method:    extractEntryToArray
  * Signature: (Ljava/lang/String;Ljava/lang/String;)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_com_sketchpunk_jniunrar_unrar_getBytes
-  (JNIEnv *env, jclass cls,jstring jFilePath,jstring jItemName);
+JNIEXPORT jbyteArray JNICALL Java_com_sketchpunk_jniunrar_unrar_extractEntryToArray
+  (JNIEnv * env, jclass cls, jstring jArcPath, jstring jEntryName);
 
 #ifdef __cplusplus
 }

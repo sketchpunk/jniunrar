@@ -1,4 +1,6 @@
 package com.sketchpunk.jniunrar;
+/*NOTE: To recreate c header, Select this file then use the external tools 
+button that's already setup with javah.*/
 
 public class unrar{
     static{ 
@@ -10,6 +12,6 @@ public class unrar{
     }//static
     
 	public static native String getVersion();
-	public static native String[] getListing(String filePath);
-	public static native byte[] getBytes(String filePath,String itemName);
+	public static native String[] getEntries(String arcPath,String extList);
+	public static native byte[] extractEntryToArray(String arcPath,String entryName);
 }//cls
