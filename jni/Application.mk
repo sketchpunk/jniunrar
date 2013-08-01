@@ -1,5 +1,5 @@
 #armeabi armeabi-v7a x86 mips
-APP_ABI := armeabi
+APP_ABI := all
 APP_PLATFORM := android-4
 
 #Some how these three options help make two cpp files in unrar compile.
