@@ -73,10 +73,6 @@ JNIEXPORT jobjectArray JNICALL Java_com_sketchpunk_jniunrar_unrar_getEntries(JNI
 	if(jExtList != NULL){
 		extList = jStringToVector(env,jExtList);
 		extListLen = extList.size();
-
-		for(int i=0; i < extListLen; i++){
-			LOGI(extList[i].c_str());
-		}//for
 	}//if
 
 	//-----------------------------------
